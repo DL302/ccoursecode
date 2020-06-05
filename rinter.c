@@ -1,5 +1,6 @@
 //program to calculate coordinates of where 2 rectangles intersect
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct rect_tag
 {

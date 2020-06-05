@@ -1,5 +1,6 @@
 //max function that takes in 2 ints and outputs the bigger of the two
 #include <stdio.h>
+#include <stdlib.h>
 
 int max(int x, int y)
 {

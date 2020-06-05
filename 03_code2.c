@@ -1,5 +1,6 @@
 //program to print a triangle given a height
 #include <stdio.h>
+#include <stdlib.h>
 
 void printTriangle(int height)
 {
