@@ -1,3 +1,4 @@
+//see 05_squares.c for program description
 #include "squarefunc.h"
 int main(int argc, char **argv)
 {

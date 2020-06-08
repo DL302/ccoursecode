@@ -1,3 +1,4 @@
+//prints some squares
 #include <stdio.h>
 #include <stdlib.h>
 
