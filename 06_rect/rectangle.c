@@ -1,3 +1,4 @@
+//return the rectangle resulting from the intersection of 2 given rectangles
 #include <stdio.h>
 #include <stdlib.h>
 
