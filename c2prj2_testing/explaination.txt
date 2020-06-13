@@ -1,0 +1,11 @@
+testing 2 pair vs full house ranking
+testing pair vs pair tiebreaker
+testing 2 pair vs 4 of a kind
+testing exact tie with one differing suit
+testing straight vs straight tiebreaker
+testing hand rankings [2 pair vs straight on the left and straight on the right]
+testing hands with equal valued cards
+testing pair 4th level tiebreaker
+testing three of a kind tiebreaker
+testing to make sure `0d` doesn't make left hand = straight
+testing card validation with `1d`
