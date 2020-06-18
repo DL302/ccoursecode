@@ -1,2 +1,2 @@
 # ccoursecode
-Some C programming assignments for a course. The program description of each program is found either in the form of a comment at the top of the C file or in the README found in the folder that the C file is in. rinter.c is another c file, but it wasn't necessarily an assignment.
+Some C programming assignments for a course. The program description of each program is found either in the form of a comment at the top of the C file or in the README found in the folder that the C file is in. The folder `optional_exercises` should be self explanatory
