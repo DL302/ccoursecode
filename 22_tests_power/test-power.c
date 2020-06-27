@@ -18,10 +18,12 @@ int main()
         testResult = tester(x[i], y[i]);
         if (testResult == expected[i])
         {
+            printf("test number %d passed.[%u ** %u = %u]\n", i, x[i], y[i], testResult);
             continue;
         }
         else
         {
+            printf("test number %d FAILED! [%u ** %u = %u], expected %u\n", i, x[i], y[i], testResult, expected[i]);
             return EXIT_FAILURE;
         }
     }
