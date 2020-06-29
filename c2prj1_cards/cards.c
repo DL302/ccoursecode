@@ -106,7 +106,7 @@ char suit_letter(card_t c)
 void print_card(card_t c)
 {
     assert_card_valid(c);
-    printf("%c%c\n", value_letter(c), suit_letter(c));
+    printf("%c%c ", value_letter(c), suit_letter(c));
 }
 
 //given character representation of card [ex (A,s)], create a card_t of it
