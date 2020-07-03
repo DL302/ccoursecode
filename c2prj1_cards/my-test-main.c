@@ -11,9 +11,11 @@ int main(void)
     ace_of_spades.suit = SPADES;
     printf("ace_of_spades currently: ");
     print_card(ace_of_spades);
+    printf("\n");
     printf("ace_of_spades now: ");
     ace_of_spades = card_from_letters('2', 'h');
     print_card(ace_of_spades);
+    printf("\n");
     for (int i = 0; i < 52; i++)
     {
         king_of_spades = card_from_num(i);
