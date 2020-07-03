@@ -6,7 +6,7 @@
 //check that the card is a valid card
 void assert_card_valid(card_t c)
 {
-    assert((c.value == 0 || (c.value >= 2 && c.value <= VALUE_ACE)) && (c.suit >= SPADES && c.suit <= CLUBS));
+    assert((c.value >= 2 && c.value <= VALUE_ACE) && (c.suit >= SPADES && c.suit <= CLUBS));
 }
 
 //convert hand_ranking_t enum to respective string
