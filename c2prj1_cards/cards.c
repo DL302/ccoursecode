@@ -52,29 +52,26 @@ const char *ranking_to_string(hand_ranking_t r)
 char value_letter(card_t c)
 {
     assert_card_valid(c);
-    if (c.value < VALUE_JACK)
+    switch (c.value)
     {
-        return '0' + c.value;
-    }
-    else if (c.value == VALUE_JACK)
-    {
-        return 'J';
-    }
-    else if (c.value == VALUE_QUEEN)
-    {
-        return 'Q';
-    }
-    else if (c.value == VALUE_KING)
-    {
-        return 'K';
-    }
-    else if (c.value == VALUE_ACE)
-    {
+    case VALUE_ACE:
         return 'A';
-    }
-    else
-    {
-        return 'X';
+        break;
+    case VALUE_KING:
+        return 'K';
+        break;
+    case VALUE_QUEEN:
+        return 'Q';
+        break;
+    case VALUE_JACK:
+        return 'J';
+        break;
+    case 10:
+        return '0';
+        break;
+    default:
+        return '0' + c.value;
+        break;
     }
 }
 
@@ -114,27 +111,27 @@ card_t card_from_letters(char value_let, char suit_let)
 {
     card_t temp;
     assert((value_let == '0' || (value_let >= '2' && value_let <= '9') || value_let == 'J' || value_let == 'Q' || value_let == 'K' || value_let == 'A') && (suit_let == 's' || suit_let == 'h' || suit_let == 'd' || suit_let == 'c'));
-    if (value_let == '0' || (value_let >= '2' && value_let <= '9'))
+    switch (value_let)
     {
-        temp.value = value_let - '0';
-    }
-    else if (value_let == 'J')
-    {
-        temp.value = VALUE_JACK;
-    }
-    else if (value_let == 'Q')
-    {
-        temp.value = VALUE_QUEEN;
-    }
-    else if (value_let == 'K')
-    {
-        temp.value = VALUE_KING;
-    }
-    else if (value_let == 'A')
-    {
+    case 'A':
         temp.value = VALUE_ACE;
+        break;
+    case 'K':
+        temp.value = VALUE_KING;
+        break;
+    case 'Q':
+        temp.value = VALUE_QUEEN;
+        break;
+    case 'J':
+        temp.value = VALUE_JACK;
+        break;
+    case '0':
+        temp.value = 10;
+        break;
+    default:
+        temp.value = value_let - '0';
+        break;
     }
-
     switch (suit_let)
     {
     case 's':
@@ -160,28 +157,9 @@ card_t card_from_num(unsigned c)
     int value;
     int suit;
     assert(c >= 0 && c < 52);
-    value = c % 13;
+    value = c % 13 + 2;
     suit = c / 13;
-    if (value == 0 || (value >= 2 && value <= 9))
-    {
-        temp.value = value;
-    }
-    else if (value == 10)
-    {
-        temp.value = VALUE_JACK;
-    }
-    else if (value == 11)
-    {
-        temp.value = VALUE_QUEEN;
-    }
-    else if (value == 12)
-    {
-        temp.value = VALUE_KING;
-    }
-    else if (value == 1)
-    {
-        temp.value = VALUE_ACE;
-    }
+    temp.value = value;
     switch (suit)
     {
     case 0:
