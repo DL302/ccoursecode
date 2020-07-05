@@ -45,10 +45,10 @@ void shuffle(deck_t *d)
 void assert_full_deck(deck_t *d)
 {
     size_t num = d->n_cards;
-    for (size_t i = 0; i <= num - 1; i++)
+    for (size_t i = 0; i < num; i++)
     {
         int count = 0;
-        for (size_t j = i; j <= num - 1; j++)
+        for (size_t j = 0; j < num; j++)
         {
             if ((deck_contains(d, *d->cards[i]) && deck_contains(d, *d->cards[j])) && (d->cards[i]->value == d->cards[j]->value && d->cards[i]->suit == d->cards[j]->suit))
             {
