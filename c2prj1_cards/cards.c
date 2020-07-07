@@ -51,7 +51,6 @@ const char *ranking_to_string(hand_ranking_t r)
 //return character that represents the card's value
 char value_letter(card_t c)
 {
-    assert_card_valid(c);
     switch (c.value)
     {
     case VALUE_ACE:
@@ -78,7 +77,6 @@ char value_letter(card_t c)
 //return letter that represents suit
 char suit_letter(card_t c)
 {
-    assert_card_valid(c);
     switch (c.suit)
     {
     case SPADES:
