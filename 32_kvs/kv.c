@@ -59,6 +59,7 @@ void freeKVs(kvarray_t *pairs)
     //frees malloced memory in *pairs
     for (int i = 0; i < pairs->size; i++)
     {
+        free(pairs->kvarr[i]->key);
         free(pairs->kvarr[i]);
     }
     free(pairs->kvarr);
