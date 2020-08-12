@@ -12,7 +12,7 @@ kvpair_t *splitOnEquals(char *line)
     *value = '\0'; //key\0value\n
     value++;
     char *key = line;
-    char *n = strchr(line, '\n');
+    char *n = strchr(value, '\n');
     if (n != NULL)
     {
         *n = '\0'; //key\0value\0
