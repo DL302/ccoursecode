@@ -3,7 +3,6 @@
 #include "eval.h"
 #include "deck.h"
 
-unsigned *get_match_counts(deck_t *hand);
 int main()
 {
     deck_t *test_deck = malloc(sizeof(*test_deck));
