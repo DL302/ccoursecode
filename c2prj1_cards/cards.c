@@ -100,7 +100,6 @@ char suit_letter(card_t c)
 //print card given a card_t [ex As, 0s, Kc]
 void print_card(card_t c)
 {
-    assert_card_valid(c);
     printf("%c%c ", value_letter(c), suit_letter(c));
 }
 
