@@ -68,6 +68,9 @@ char value_letter(card_t c)
     case 10:
         return '0';
         break;
+    case 0:
+        return '?';
+        break;
     default:
         return '0' + c.value;
         break;
