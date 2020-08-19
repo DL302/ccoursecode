@@ -130,7 +130,7 @@ int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
                     return 1;
                 }
             }
-            else if (hand->cards[i - 1]->value - hand->cards[i]->value == 0 || hand->cards[i - 1]->suit != fs)
+            else if (/*hand->cards[i - 1]->value - hand->cards[i]->value == 0 ||*/ hand->cards[i - 1]->suit != fs)
             {
                 continue;
             }
