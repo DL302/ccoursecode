@@ -200,6 +200,10 @@ hand_eval_t build_hand_from_match(deck_t *hand, unsigned n, hand_ranking_t what,
     return ans;
 }
 
+//given 2 hands
+//return 1 if hand1 > hand2
+//return -1 if hand2 > hand1
+//return 0 if hand1 = hand2
 int compare_hands(deck_t *hand1, deck_t *hand2)
 {
     qsort(hand1->cards, hand1->n_cards, sizeof(card_t), card_ptr_comp);
